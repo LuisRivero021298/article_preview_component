@@ -17,6 +17,18 @@ body {
   display: none;
 }
 .attribution a { color: hsl(228, 45%, 44%); }
+.circle-box{
+  border-radius: 100%;
+}
+.cover-img{
+  object-fit: cover;
+  object-position: top;
+  background-size: cover;
+  height: 100%;
+  width: 100%; 
+}
+
+/*Mobile first*/
 .main{
   min-height: 667px;
   display: flex;
@@ -36,12 +48,7 @@ section.information .main-image{
   border-radius: 15px 15px 0 0;
 }
 .main-image img{
-  object-fit: cover;
-  object-position: top;
-  background-size: cover;
-  height: 100%;
   border-radius: 15px 15px 0 0;
-  width: 100%; 
 }
 section.information .text-information{
   padding: 10px 30px; 
@@ -51,52 +58,83 @@ section.information .text-information{
 section.information .main-text{
   font-size: 17px;
   font-weight: 700;
-  color: rgb(95, 95, 100);
+  color: var(--main-dark-grayish-blue);
 }
 section.information .text{
   font-size: 15px;
   font-weight: 500;
-  color: rgb(115, 115, 115);
+  color: var(--main-grayish-blue);
   text-align: left;
 }
-section.information .user-shared{
-  padding: 0px 30px; 
-  padding-bottom: 25px;
+section.information #user-share,
+section.information #user-shared .shared-option{
+  padding: 20px 30px; 
   display: grid;
   grid-gap: 15px;
   grid-template-columns: 45px 1fr 45px;
 }
-.user-shared .image-user{
+#user-share .image-user,
+#user-share .shared{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
-  border-radius: 20px;
 }
-.image-user img{
+.image-user img {
   width: 45px;
   height: 45px;
-  border-radius: 100%;
-  object-fit: cover;
-  object-position: top;
-  background-size: cover;
-  border-radius: 100%;
 }
-.user-shared .user-information {
+#user-share .user-information {
   font-size: 14px;
-  padding-top: 10px;
+  padding-top: 8px;
 }
 .user-information p{
   margin: 0;
 }
 .user-information #name-user{
   font-weight: 700;
-  color: rgb(95, 95, 100);
+  color: var(--main-dark-grayish-blue);
 }
 .user-information #date-shared{
-  color: rgb(115, 115, 115); 
+  color: var(--main-grayish-blue); 
 }
-/*Mobile first*/
+.shared .btn-shared{
+  border: none;
+  width: 35px;
+  height: 35px;
+  background-color: var(--main-light-grayish-blue);
+}
+
+/*shared options*/
+section.information #user-shared .shared-option {
+  grid-template-columns: 70px 1fr 45px;
+  background-color: var(--main-dark-grayish-blue);
+  border-radius: 0 0 15px 15px;
+  padding-top: 20px;
+}
+.shared-option #na,
+.shared-option #shared-social {
+  display: flex;
+  align-items: center;
+}
+.shared-option #na span{
+  color: var(--main-grayish-blue);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+}
+.shared-option #shared-social a{
+  margin-right: 15px;
+  width: 22px;
+  height: 22px;
+}
+#shared-social a img{
+  width: 22px;
+  height: 22px;
+}
+.shared-option .shared .btn-shared{
+  background-color: var(--main-dark-blue);
+}
 
 

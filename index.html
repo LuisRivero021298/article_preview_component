@@ -18,9 +18,9 @@
   </head>
   <body>
     <div class="main">
-      <section class="information">
+      <section id="main-information" class="information">
         <div class="main-image">
-          <img src="images/drawers.jpg" alt="image" />
+          <img class="cover-img" src="images/drawers.jpg" alt="image" />
         </div>
         <div class="text-information">
           <p class="main-text">
@@ -34,21 +34,24 @@
             you make any room feel complete.
           </p>
         </div>
-        <div class="user-shared">
-          <div class="image-user">
-            <img 
-              src="images/avatar-michelle.jpg" 
-              alt="avatar"
-            >
-          </div>
-          <div class="user-information">
-            <p id="name-user">Michelle Appleton</p>
-            <p id="date-shared">28 Jun 2020 Share</p>
-          </div>
-          <div class="shared">
-            <button type="button">
-              btn
-            </button>
+        <div id="user-shared">
+          <div id="user-share">
+            <div class="image-user circle-box">
+              <img 
+                class="circle-box cover-img"
+                src="images/avatar-michelle.jpg" 
+                alt="avatar"
+              >
+            </div>
+            <div class="user-information">
+              <p id="name-user">Michelle Appleton</p>
+              <p id="date-shared">28 Jun 2020 Share</p>
+            </div>
+            <div class="shared">
+              <button id="btn-share" class="circle-box btn-shared" type="button">
+                <img src="images/icon-share.svg" alt="shared">
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -59,5 +62,6 @@
         >. Coded by <a href="#">Luis Rivero</a>.
       </section>
     </div>
+    <script src="app.js" type="module"></script>
   </body>
 </html>
