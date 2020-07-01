@@ -1,5 +1,102 @@
+@import url("https://fonts.google.com/specimen/Manrope");
 body {
   margin: 0;
-  padding: 0;
-
+  padding: 0; 
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--main-light-grayish-blue);
 }
+:root{
+  --main-dark-grayish-blue:hsl(217, 19%, 35%); 
+  --main-dark-blue:hsl(214, 17%, 51%);
+  --main-grayish-blue:hsl(212, 23%, 69%);
+  --main-light-grayish-blue:hsl(210, 46%, 95%);
+}
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  display: none;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+.main{
+  min-height: 667px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.information{
+  width: 88%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,.1);
+}
+section.information .main-image{
+  height: 210px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.main-image img{
+  object-fit: cover;
+  object-position: top;
+  background-size: cover;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  width: 100%; 
+}
+section.information .text-information{
+  padding: 10px 30px; 
+  padding-bottom: 0;
+  line-height: 1.4;
+} 
+section.information .main-text{
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(95, 95, 100);
+}
+section.information .text{
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(115, 115, 115);
+  text-align: left;
+}
+section.information .user-shared{
+  padding: 0px 30px; 
+  padding-bottom: 25px;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 45px 1fr 45px;
+}
+.user-shared .image-user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.image-user img{
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: top;
+  background-size: cover;
+  border-radius: 100%;
+}
+.user-shared .user-information {
+  font-size: 14px;
+  padding-top: 10px;
+}
+.user-information p{
+  margin: 0;
+}
+.user-information #name-user{
+  font-weight: 700;
+  color: rgb(95, 95, 100);
+}
+.user-information #date-shared{
+  color: rgb(115, 115, 115); 
+}
+/*Mobile first*/
+
+
