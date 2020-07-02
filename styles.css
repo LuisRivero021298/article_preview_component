@@ -1,84 +1,91 @@
-@font-face{
-  font-family: 'Manrope';
-  src: url('font/static/Manrope-Regular.ttf');
+@font-face {
+  font-family: "Manrope";
+  src: url("font/static/Manrope-Regular.ttf");
 }
 body {
   margin: 0;
-  padding: 0; 
-  font-family: 'Manrope';
+  padding: 0;
+  font-family: "Manrope";
   background-color: var(--main-light-grayish-blue);
 }
-:root{
-  --main-dark-grayish-blue:hsl(217, 19%, 35%); 
-  --main-dark-blue:hsl(214, 17%, 51%);
-  --main-grayish-blue:hsl(212, 23%, 69%);
-  --main-light-grayish-blue:hsl(210, 46%, 95%);
+:root {
+  --main-dark-grayish-blue: hsl(217, 19%, 35%);
+  --main-dark-blue: hsl(214, 17%, 51%);
+  --main-grayish-blue: hsl(212, 23%, 69%);
+  --main-light-grayish-blue: hsl(210, 46%, 95%);
 }
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
+.attribution {
+  font-size: 11px;
+  text-align: center;
   display: none;
 }
-.attribution a { color: hsl(228, 45%, 44%); }
-.circle-box{
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.circle-box {
   border-radius: 100%;
 }
-.cover-img{
+.cover-img {
   object-fit: cover;
   object-position: top;
   background-size: cover;
   height: 100%;
-  width: 100%; 
+  width: 100%;
 }
 
 /*Mobile first*/
-.main{
+.main {
   min-height: 667px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section.information{
+p {
+  margin: 17px 0;
+}
+section.information {
   width: 88%;
   max-width: 330px;
   background-color: #fff;
   margin: 0 auto;
   border-radius: 15px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
-section.information .main-image{
+section.information .main-image {
   height: 210px;
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
-.main-image img{
+.main-image img {
   border-radius: 15px 15px 0 0;
 }
-section.information .text-information{
-  padding: 10px 30px; 
+section.information .text-information {
+  padding: 10px 0px;
   padding-bottom: 0;
   line-height: 1.4;
-} 
-section.information .main-text{
+}
+section.information .main-text {
   font-size: 17px;
   font-weight: 700;
+  padding: 0 30px;
   color: var(--main-dark-grayish-blue);
 }
-section.information .text{
+section.information .text {
   font-size: 15px;
+  padding: 0 30px;
   font-weight: 500;
   color: var(--main-grayish-blue);
   text-align: left;
 }
 section.information #user-share,
-section.information #user-shared #shared-option{
-  padding: 20px 30px; 
+section.information #shared-option {
+  padding: 20px 30px;
   display: grid;
   grid-gap: 15px;
   grid-template-columns: 45px 1fr 45px;
 }
 #user-share .image-user,
-.shared{
+.shared {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,54 +100,119 @@ section.information #user-shared #shared-option{
   font-size: 14px;
   padding-top: 6px;
 }
-.user-information p{
+.user-information p {
   margin: 0;
 }
-.user-information #name-user{
+.user-information #name-user {
   font-weight: 700;
   color: var(--main-dark-grayish-blue);
 }
-.user-information #date-shared{
-  color: var(--main-grayish-blue); 
+.user-information #date-shared {
+  color: var(--main-grayish-blue);
 }
-.shared .btn-shared{
+.shared .btn-shared,
+.btn-shared2{
   border: none;
   width: 35px;
   height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--main-light-grayish-blue);
 }
-
+.btn-shared2{
+  display: none;
+}
 /*shared options*/
-section.information #user-shared #shared-option { 
+section.information #shared-option {
   grid-template-columns: 70px 1fr 45px;
   display: none;
   background-color: var(--main-dark-grayish-blue);
   border-radius: 0 0 15px 15px;
   padding-top: 20px;
-  min-height: 45px;
+  min-height: 85px;
 }
 #shared-option #na,
 #shared-option #shared-social {
   display: flex;
   align-items: center;
 }
-#shared-option #na span{
+#shared-option #na span {
   color: var(--main-grayish-blue);
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 4.5px;
 }
-#shared-option #shared-social a{
+#shared-option #shared-social a {
   margin-right: 15px;
   width: 22px;
   height: 22px;
 }
-#shared-social a img{
+#shared-social a img {
   width: 22px;
   height: 22px;
 }
-#shared-option .shared .btn-shared{
+#shared-option .shared .btn-shared {
   background-color: var(--main-dark-blue);
 }
 
-/*animate*/
+/*responsive */
+@media only screen and (min-width: 890px) {
+  .shared .btn-shared {
+    display: none;
+  }
+  .btn-shared2{
+    display: inline;
+    display: flex;
+  }
+  #main-information {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    max-width: 700px;
+    border-radius: 5px;
+  }
+  #main-information .main-image {
+    height: 100%;
+    border-radius: 0;
+  }
+  #main-information .main-image img {
+    border-radius: 0;
+  }
+  #main-information #user-share,
+  #main-information #shared-option {
+    padding: 10px 30px 25px 30px;
+  }
+  #main-information #shared-option {
+    border-radius: 0px;
+    min-height: 80px;
+  }
+  .bs-popover-top > .arrow::after {
+    border-top-color: var(--main-dark-grayish-blue);
+  }
+  .popover-body {
+    background-color: var(--main-dark-grayish-blue);
+    min-width: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 5px;
+  }
+  .popover-body .na {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popover-body .na span {
+    color: var(--main-grayish-blue);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .popover-body .shared-social a img,
+  .popover-body .shared-social a {
+    width: 13px;
+    height: 13px;
+  }
+  .popover-body .shared-social a{
+    margin-right: 4px;
+  } 
+}

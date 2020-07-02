@@ -1,11 +1,13 @@
 let btnShared = document.getElementsByClassName("btn-shared");
 const boxUserShare = document.getElementById("user-share");
 const boxUserShare2 = document.getElementById("shared-option");
+let width = screen.width;
+let height = screen.height;
 
 /* Click for shared */
 btnShared[0].addEventListener(
   "click",
-  (event) => {
+  () => {
     boxUserShare.style.display = "none";
     boxUserShare2.style.display = "inherit";
     boxUserShare2.style.display = "grid";
@@ -25,3 +27,7 @@ btnShared[1].addEventListener(
   },
   true
 );
+/*click for shared whit popover*/
+$(function () {
+  $('[data-toggle="popover"]').popover();
+});
