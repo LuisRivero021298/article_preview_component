@@ -83,7 +83,7 @@ section.information #shared-option {
   padding: 20px 30px;
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: 60px 1fr 60px;
+  grid-template-columns: 50px 1fr 50px;
 }
 #user-share .image-user,
 .shared {
@@ -107,10 +107,11 @@ section.information #shared-option {
 .user-information #name-user {
   font-weight: 700;
   color: var(--main-dark-grayish-blue);
+  font-size: 12.5px;
 }
 .user-information #date-shared {
   color: var(--main-grayish-blue);
-  font-size: 13px;
+  font-size: 12px;
 }
 .shared .btn-shared,
 .btn-shared2{
@@ -160,6 +161,14 @@ section.information #shared-option {
 }
 
 /*responsive */
+@media only screen and (min-width: 360px){
+  .user-information #name-user {
+   font-size: 15px; 
+  }
+  .user-information #date-shared{
+    font-size: 13px;
+  } 
+}
 @media only screen and (min-width: 890px) {
   .shared .btn-shared {
     display: none;
