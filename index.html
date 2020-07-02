@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -28,28 +31,54 @@
             furniture in your home
           </p>
           <p class="text">
-            Ever been in a room and felt like 
-            something was missing? Perhaps it felt 
-            slightly bare and uninviting. I’ve got some simple tips to help
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete.
           </p>
         </div>
         <div id="user-shared">
           <div id="user-share">
             <div class="image-user circle-box">
-              <img 
+              <img
                 class="circle-box cover-img"
-                src="images/avatar-michelle.jpg" 
+                src="images/avatar-michelle.jpg"
                 alt="avatar"
-              >
+              />
             </div>
             <div class="user-information">
               <p id="name-user">Michelle Appleton</p>
               <p id="date-shared">28 Jun 2020 Share</p>
             </div>
             <div class="shared">
-              <button id="btn-share" class="circle-box btn-shared" type="button">
-                <img src="images/icon-share.svg" alt="shared">
+              <button class="circle-box btn-shared" type="button">
+                <img src="images/icon-share.svg" alt="shared" />
+              </button>
+            </div>
+          </div>
+
+          <div id="shared-option">
+            <div id="na">
+              <span>share</span>
+            </div>
+            <div id="shared-social">
+              <a href="facebook.com">
+                <img src="images/icon-facebook.svg" alt="facebook" />
+              </a>
+              <a href="twiiter.com">
+                <img src="images/icon-twitter.svg" alt="twitter" />
+              </a>
+              <a href="pinterest.com">
+                <img src="images/icon-pinterest.svg" alt="pinterest" />
+              </a>
+            </div>
+            <div class="shared">
+              <button class="circle-box btn-shared" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                  <path
+                    fill="#fff"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  />
+                </svg>
               </button>
             </div>
           </div>
@@ -62,6 +91,6 @@
         >. Coded by <a href="#">Luis Rivero</a>.
       </section>
     </div>
-    <script src="app.js" type="module"></script>
+    <script src="app.js"></script>
   </body>
 </html>
